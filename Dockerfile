@@ -26,14 +26,14 @@ RUN cd /opt/ci-grunt-karma-mocha && npm install
 # Build display versions
 # RUN cd /opt/ci-grunt-karma-mocha && node build.js
 
-ADD xvfb.sh /etc/init.d/xvfb
-ADD entrypoint.sh /entrypoint.sh
+###ADD xvfb.sh /etc/init.d/xvfb
+###ADD entrypoint.sh /entrypoint.sh
 
-ENV DISPLAY :99.0
-ENV CHROME_BIN /usr/bin/google-chrome
+###ENV DISPLAY :99.0
+###ENV CHROME_BIN /usr/bin/google-chrome
 
 ##### EXPOSE 5000
 ##### CMD forever /opt/display/server.js
 ##### CMD /bin/bash
 
-ENTRYPOINT ["/entrypoint.sh"]
+###ENTRYPOINT ["/entrypoint.sh"]
