@@ -13,7 +13,8 @@ module.exports = function(config) {
     reporters: ['progress', 'junit'],
     // the default configuration
     junitReporter: {
-      outputDir: 'results', // results will be saved as $outputDir/$browserName.xml
+      //outputDir: 'results', // results will be saved as $outputDir/$browserName.xml
+      outputDir: 'tmp/karma', // results will be saved as $outputDir/$browserName.xml
       outputFile: undefined, // if included, results will be saved as $outputDir/$browserName/$outputFile
       suite: '' // suite will become the package name attribute in xml testsuite element
     }

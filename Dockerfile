@@ -26,11 +26,11 @@ RUN cd /opt/ci-grunt-karma-mocha && npm install
 # Build display versions
 # RUN cd /opt/ci-grunt-karma-mocha && node build.js
 
-###ADD xvfb.sh /etc/init.d/xvfb
-###ADD entrypoint.sh /entrypoint.sh
+### UNCOMMENT THIS BLOCK WHEN RUNNING DOCKER LOCALLY (e.g. boot2docker, docker tools, etc.)
+### ADD xvfb.sh /etc/init.d/xvfb
+### ENV DISPLAY :99.0
+###E NV CHROME_BIN /usr/bin/google-chrome
 
-###ENV DISPLAY :99.0
-###ENV CHROME_BIN /usr/bin/google-chrome
 
 ##### EXPOSE 5000
 ##### CMD forever /opt/display/server.js
